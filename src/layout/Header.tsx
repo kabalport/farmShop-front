@@ -6,6 +6,7 @@ const Header: React.FC = () => {
     return (
         <div>
             <header className="header">
+                <h1></h1>
                 <div className="header-links">
                     <Link to="/login">로그인</Link>
                     <Link to="/signup">회원가입</Link>
