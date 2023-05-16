@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-links {
+    display: flex;
+    gap: 10px; /* 링크 사이의 간격을 조절합니다. */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around; /* navbar 안의 링크들이 공간을 고르게 차지하도록 합니다. */
+    padding: 10px 0; /* navbar의 위아래에 패딩을 추가합니다. */
+}

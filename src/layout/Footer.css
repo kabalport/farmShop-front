@@ -1,0 +1,13 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.footer-info,
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
