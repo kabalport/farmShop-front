@@ -6,6 +6,8 @@ import Footer from './layout/Footer';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import FindPage from './pages/FindPage';
+import SearchPage from "./pages/SearchPage";
+import HomePage from "./pages/HomePage";
 
 const App: React.FC = () => {
     return (
@@ -17,6 +19,11 @@ const App: React.FC = () => {
                         <Route path="/login" element={<LoginPage />} />
                         <Route path="/signup" element={<SignupPage />} />
                         <Route path="/find" element={<FindPage />} />
+                        // App.tsx
+                        <Route path="/prices" element={<SearchPage />} />
+                        // App.tsx
+                        <Route path="/" element={<HomePage />} />
+
                     </Routes>
                 </Main>
                 <Footer />

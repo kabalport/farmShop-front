@@ -1,25 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css'; // CSS 파일을 import 합니다.
+import { AppBar, Toolbar, Typography, Button, IconButton } from '@mui/material';
 
 const Header: React.FC = () => {
     return (
-        <div>
-            <header className="header">
-                <h1></h1>
-                <div className="header-links">
-                    <Link to="/login">로그인</Link>
-                    <Link to="/signup">회원가입</Link>
-                    <Link to="/find">ID/PW 찾기</Link>
-                </div>
-            </header>
-            <nav className="navbar">
-                <Link to="/">로고</Link>
-                <Link to="/prices">농수산물 가격 검색</Link>
-                <Link to="/shopping">쇼핑</Link>
-                <Link to="/forum">자유게시판</Link>
-            </nav>
-        </div>
+        <AppBar position="static">
+            <Toolbar>
+                <IconButton edge="start" color="inherit" aria-label="menu">
+                    {/* 여기에 로고를 넣을 수 있습니다. */}
+                </IconButton>
+                <Typography variant="h6" style={{ flexGrow: 1 }}>
+                    <Link to="/">로고</Link>
+                </Typography>
+                <Button color="inherit" component={Link} to="/login">
+                    로그인
+                </Button>
+                <Button color="inherit" component={Link} to="/signup">
+                    회원가입
+                </Button>
+                <Button color="inherit" component={Link} to="/find">
+                    ID/PW 찾기
+                </Button>
+            </Toolbar>
+            <Toolbar>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Link to="/prices">농산물가격검색</Link>
+                </Typography>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Link to="/shopping">쇼핑</Link>
+                </Typography>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                    <Link to="/freeboard">자유게시판</Link>
+                </Typography>
+            </Toolbar>
+        </AppBar>
     );
 };
 
